@@ -22,7 +22,11 @@ public class LRUCache {
 
     public int get(int key) {
         // 키가 존재하면 값을 반환, 없으면 -1 반환
-        return cache.getOrDefault(key, -1);
+        // return cache.getOrDefault(key, -1);
+        if(cache.containsKey(key)) {
+            return cache.get(key);
+        }
+        return -1;
     }
 
     public void put(int key, int value) {
