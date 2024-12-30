@@ -1,4 +1,4 @@
-package com.vincenzo.simple.buffer;
+package com.vincenzo.simple.thread;
 
 import java.util.LinkedList;
 import java.util.Queue;
