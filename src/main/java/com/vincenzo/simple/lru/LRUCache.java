@@ -11,7 +11,7 @@ public class LRUCache {
         this.capacity = capacity;
 
         // LinkedHashMap 초기화 (accessOrder를 true로 설정하여 접근 순서 유지)
-        this.cache = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true) {
+        this.cache = new LinkedHashMap<>(this.capacity, 0.75f, true) {
             @Override
             protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
                 // 용량 초과 시 가장 오래된 항목 제거
